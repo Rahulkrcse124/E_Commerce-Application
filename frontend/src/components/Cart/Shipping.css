@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+}
+
+
+.shippingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+
+.checkoutStepsContainer {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutStepsContainer svg {
+  font-size: 2rem;
+  color: #ff6347;
+}
+
+
+.shippingBox {
+  background: white;
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.shippingHeading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+.shippingForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+
+.shippingForm div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 0.7rem;
+  transition: 0.3s;
+  background: #f9f9f9;
+}
+
+.shippingForm div:focus-within {
+  border-color: #ff6347;
+  box-shadow: 0px 0px 5px rgba(255, 99, 71, 0.5);
+}
+
+.shippingForm div input,
+.shippingForm div select {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.shippingForm div svg {
+  font-size: 1.4rem;
+  color: #ff6347;
+}
+
+
+.shippingForm div select {
+  cursor: pointer;
+  background: white;
+}
+
+
+.shippingBtn {
+  background: #ff6347;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.shippingBtn:hover {
+  background: #e5533d;
+  box-shadow: 0px 4px 10px rgba(255, 99, 71, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .shippingBox {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .shippingHeading {
+    font-size: 1.5rem;
+  }
+
+  .shippingForm div {
+    padding: 0.6rem;
+  }
+
+  .shippingForm div input,
+  .shippingForm div select {
+    font-size: 0.9rem;
+  }
+
+  .shippingBtn {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

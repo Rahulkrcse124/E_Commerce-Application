@@ -1,0 +1,100 @@
+/* Container styling */
+.newProductContainer {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* Form styling */
+.createProductForm {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.createProductForm h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Input group styling */
+.createProductForm > div {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: #f1f1f1;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.createProductForm > div:focus-within {
+  background-color: #eaeaea;
+}
+
+/* Inputs and selects */
+.createProductForm input,
+.createProductForm select {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Submit button */
+#createProductBtn {
+  background-color: #1976d2;
+  color: #fff;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#createProductBtn:disabled {
+  background-color: #b3b3b3;
+  cursor: not-allowed;
+}
+
+#createProductBtn:hover:not(:disabled) {
+  background-color: #115293;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .newProductContainer {
+    padding: 1rem;
+  }
+
+  .createProductForm {
+    padding: 1.5rem;
+  }
+
+  .createProductForm h1 {
+    font-size: 1.5rem;
+  }
+
+  .createProductForm input,
+  .createProductForm select {
+    font-size: 0.95rem;
+  }
+
+  #createProductBtn {
+    font-size: 0.95rem;
+  }
+}

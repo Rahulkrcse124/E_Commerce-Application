@@ -1,0 +1,111 @@
+/* Sidebar Container */
+.sidebar {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  width: 250px;
+  height: 100vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar Links */
+.sidebar a,
+.sidebar-dropdown {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  font: 500 1rem "Roboto", sans-serif;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Space between icon and text */
+  transition: 0.3s ease-in-out;
+  border-radius: 6px;
+}
+
+/* Hover Effect */
+.sidebar a:hover,
+.sidebar-dropdown:hover {
+  color: tomato;
+  background-color: rgba(255, 99, 71, 0.1);
+  transform: scale(1.05);
+}
+
+/* Space between items */
+.sidebar a:not(:last-child),
+.sidebar-dropdown {
+  margin-bottom: 10px;
+}
+
+/* Fix Spacing Between Dashboard & Products */
+.sidebar a:first-child {
+  margin-bottom: 15px; /* Adds space below Dashboard */
+}
+
+/* Products Dropdown */
+.sidebar-dropdown {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Submenu Style */
+.sidebar-submenu {
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  border-left: 3px solid tomato;
+  margin-top: 5px;
+}
+
+.sidebar-submenu a {
+  padding: 10px;
+  font-size: 0.95rem;
+}
+
+/* Icons Styling */
+.sidebar a > p,
+.sidebar-dropdown > p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar a > p > svg {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Responsive Sidebar */
+@media screen and (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+    padding: 1.5rem 0;
+  }
+
+  .sidebar a,
+  .sidebar-dropdown {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar a,
+  .sidebar-dropdown {
+    padding: 8px 12px;
+    font-size: 0.85rem;
+  }
+}

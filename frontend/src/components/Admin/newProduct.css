@@ -1,0 +1,114 @@
+.newProductContainer {
+  flex: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: #f8f9fa;
+}
+
+.newProductForm {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.newProductForm h1 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+
+.newProductForm input,
+.newProductForm textarea,
+.newProductForm select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.newProductForm input:focus,
+.newProductForm textarea:focus,
+.newProductForm select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.newProductForm textarea {
+  resize: none;
+  height: 100px;
+}
+
+
+.newProductForm input[type="file"] {
+  border: none;
+}
+
+
+.imagePreviewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.imagePreviewContainer img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+
+.newProductForm button {
+  background: #007bff;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.newProductForm button:hover {
+  background: #0056b3;
+}
+
+.newProductForm button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+
+@media screen and (max-width: 768px) {
+  .newProductContainer {
+    padding: 15px;
+  }
+  .newProductForm {
+    max-width: 400px;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .newProductForm {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
